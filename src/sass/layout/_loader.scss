@@ -5,6 +5,8 @@
   --first-color: #ff7473;
   --second-color: #ffc952;
   --third-color: #47b8e0;
+  --size: 200px;
+  --duration: 1s;
   background-color: #34314c;
   position: fixed;
   width: 100%;
@@ -15,8 +17,8 @@
 }
 .loader__content {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: var(--size);
+  height: var(--size);
 }
 .loader__first,
 .loader__second,
@@ -25,7 +27,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  animation: 1s linear infinite;
+  animation: var(--duration) linear infinite;
 }
 .loader__first {
   border-bottom: 3px solid var(--first-color);
