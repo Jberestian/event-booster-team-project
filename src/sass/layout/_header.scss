@@ -1,0 +1,110 @@
+.header {
+  padding-top: 80px;
+  background-color: #191616;
+  background-image: url(../images/header/mob-bg-pic.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/header/mob-bg-pic-2x.jpg);
+  }
+
+  // max-width: 1600px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/header/tab-bg-pic.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/header/tab-bg-pic-2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/header/desk-bg-pic.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/header/desk-bg-pic.jpg);
+    }
+  }
+}
+
+.header-logo {
+  position: absolute;
+  fill: $main-white-color;
+  // z-index: 1;
+  background-image: url();
+}
+
+.header-title {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  margin-bottom: 24px;
+  color: $accent-color;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-form__input {
+  display: inline-block;
+  width: 288px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 1.25;
+  padding-left: 32px;
+  // color: $main-gray-color;
+  border: 1px solid red;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  // background-color: plum;
+  backdrop-filter: blur(20px);
+  outline: none;
+
+  // &:not(:last-child) {
+  //   margin-right: 50px;
+  // }
+}
+
+// .search-form__input:not(:last-child) {
+//   margin-right: 50px;
+// }
+
+.search-form__input__wrap {
+  position: relative;
+  color: blueviolet;
+}
+
+.search-icon {
+  fill: $main-gray-color;
+}
+
+.search-form__btn {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 50%;
+  height: 40px;
+  width: 60px;
+  border: teal;
+  outline: none;
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 20px 20px 0px;
+  transform: translateY(-50%);
+  transition: fill 250ms ease;
+
+  .modal-input-wrap:focus-within & {
+    fill: $main-white-color;
+  }
+}
+
+.search-form__btn {
+  background-color: transparent;
+}
