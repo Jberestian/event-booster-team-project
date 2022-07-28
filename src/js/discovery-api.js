@@ -7,9 +7,25 @@ export class DiscoveryAPI {
   constructor() {
     this.searchQuery = '';
     this.page = 0;
+    this.totalElements = 980;
+    this.eventPageQuantity = 18;
   }
 
   fetchEvents() {
-    return axios.get(`${this.#BASE_URL}?apikey=${this.#API_KEY}`);
+    return axios.get(
+      `${this.#BASE_URL}?apikey=${this.#API_KEY}&size=${this.eventPageQuantity}`
+    );
+  }
+
+  searchEventsByName() {
+    return axios.get(
+      `${this.#BASE_URL}?apikey=${this.#API_KEY}&keyword=${
+        this.searchQuery
+      }&size=${this.eventPageQuantity}`
+    );
+  }
+
+  setPage(page) {
+    this.page = page;
   }
 }
