@@ -7,7 +7,7 @@
   --third-color: #47b8e0;
   --size: 200px;
   --duration: 1s;
-  background-color: #34314c;
+  // background-color: $accent-color;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -64,4 +64,12 @@
   100% {
     transform: rotateX(50deg) rotateY(55deg) rotateZ(360deg);
   }
+}
+.loaded_hiding .loader {
+  transition: 2s opacity;
+  opacity: -1;
+}
+
+.loaded .loader {
+  display: none;
 }
