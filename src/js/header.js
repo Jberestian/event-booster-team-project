@@ -17,7 +17,7 @@ const onEventSerchInput = async event => {
 
     if (!data._embedded) {
       Notiflix.Notify.failure(
-        'Sorry, there are no images matching your search query. Please try again.'
+        'Sorry, there are no events matching your search query. Please try again.'
       );
       return;
     }
