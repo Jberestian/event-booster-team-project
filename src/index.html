@@ -19,12 +19,20 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Edu+VIC+WA+NT+Beginner&family=Montserrat:wght@400;500;600;700;900&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-
+    
+    <script type="module" src="./js/loader.js"></script>
     <script type="module" src="./index.js"></script>
     <script type="module" src="./js/header.js"></script>
     <!-- <script type="module" src="./js/pagination.js"></script> -->
   </head>
   <body>
+    <div class="loader">
+      <div class="loader__content">
+        <div class="loader__first"></div>
+        <div class="loader__second"></div>
+        <div class="loader__third"></div>
+      </div>
+    </div>
     <include src="./partials/header.html"></include>
     <include src="./partials/main.html"></include>
     <include src="./partials/footer.html"></include>
