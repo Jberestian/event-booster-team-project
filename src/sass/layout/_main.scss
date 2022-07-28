@@ -1,0 +1,151 @@
+.border {
+  position: absolute;
+  height: 95px;
+  width: 102px;
+  left: 35px;
+  top: -10px;
+  border: 1px solid rgba(220, 86, 197, 0.3);
+  border-radius: 50px 0px;
+}
+
+.event-gallery {
+  padding: 60px 0;
+  background-color: black;
+  background-image: url(./../images/main-section/bg-drops.png);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: calc(50% - 10px);
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    padding-bottom: 8px;
+    width: 100%;
+    max-width: 125px;
+    border-radius: 50px 0;
+  }
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__name {
+    padding-bottom: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $accent-color;
+  }
+
+  &__date {
+    padding-bottom: 8px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $main-white-color;
+  }
+
+  &__location {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $main-white-color;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .border {
+    height: 115px;
+    width: 120px;
+    top: -10px;
+    left: 60px;
+  }
+
+  .event-gallery {
+    &__img {
+      width: 100%;
+      max-width: 165px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .border {
+    height: 120px;
+    width: 130px;
+    left: 85px;
+    top: -10px;
+  }
+
+  .event-gallery {
+    &__item {
+      width: calc(30% - 10px);
+      margin-bottom: 54px;
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 205px;
+      height: 230px;
+    }
+  }
+
+  .event-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__name {
+      font-size: 16px;
+      line-height: 20px;
+      color: $accent-color;
+    }
+
+    &__date {
+      font-size: 16px;
+      line-height: 20px;
+      color: $main-white-color;
+    }
+
+    &__location {
+      font-size: 14px;
+      line-height: 17px;
+      color: $main-white-color;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .border {
+    width: 200px;
+    height: 192px;
+    top: -15px;
+    left: 45px;
+  }
+
+  .event-gallery {
+    &__item {
+      width: calc(24% - 10px);
+      margin-bottom: 59px;
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 267px;
+      height: 337px;
+    }
+  }
+}

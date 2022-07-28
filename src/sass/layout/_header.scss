@@ -181,37 +181,4 @@
   &__icon {
     fill: $main-gray-color;
   }
-
-  &__select {
-    width: 100%;
-    height: 100%;
-    padding-left: 32px;
-    border-radius: 20px;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
-    border: none;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-    &:focus {
-      border: 1px solid $main-white-color;
-      outline: none;
-    }
-  }
-}
-
-.select__icon {
-  position: absolute;
-  top: 14;
-  right: 20;
-  fill: $main-gray-color;
-}
-
-.custom-select-panel {
-  background-color: rgba(255, 255, 255, 0.2);
 }
