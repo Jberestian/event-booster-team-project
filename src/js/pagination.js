@@ -1,25 +1,39 @@
 import { DiscoveryAPI } from './discovery-api';
 import Pagination from 'tui-pagination';
 import { refs } from './refs';
+import { createEventList } from './createEventList';
+
 
 const discoveryApi = new DiscoveryAPI();
 
-export const option = {
-  totalItems: 980,
-  visiblePages: 5,
-  itemsPerPage: 20,
-};
+export function startPagination(totalEvents) {
+  const options = {
+    totalItems: totalEvents,
+    itemsPerPage: discoveryApi.size,
+    visiblePages: window.outerWidth < 768 ? 3 : 5,
+    page: 1,
+    centerAlign: true,
+  };
+  const pagination = new Pagination(refs.pagination, options);
 
-export function startPagination() {
-  const totalEl =
-    discoveryApi.totalElements < 980 ? discoveryApi.totalElements : 980;
-  option.totalItems = totalEl;
-
-  const pagination = new Pagination(refs.pagination, option);
-  pagination.on('beforeMove', function (e) {
-    discoveryApi.setPage(e.page);
-    refs.galleryList.innerHTML = '';
+  pagination.on('beforeMove', function (eventData) {
+    discoveryApi.page = eventData.page - 1;
     discoveryApi.fetchEvents();
-    console.log(e);
+
+    const nextPage = async () => {
+      try {
+        const { data } = await discoveryApi.fetchEvents();
+
+        let event = data._embedded.events;
+
+        refs.galleryList.innerHTML = event;
+
+        createEventList(event);
+      
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    nextPage();
   });
 }
