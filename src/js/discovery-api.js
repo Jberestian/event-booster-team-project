@@ -7,13 +7,15 @@ export class DiscoveryAPI {
   constructor() {
     this.searchQuery = '';
     this.page = 0;
-    this.totalElements = 980;
     this.eventPageQuantity = 18;
+    this.size = 20;
   }
 
   fetchEvents() {
     return axios.get(
-      `${this.#BASE_URL}?apikey=${this.#API_KEY}&size=${this.eventPageQuantity}`
+      `${this.#BASE_URL}?apikey=${this.#API_KEY}&size=${
+        this.eventPageQuantity
+      }&page=${this.page}`
     );
   }
 
