@@ -23,4 +23,3 @@ document.addEventListener('keydown', event => {
 openModalBtn.addEventListener('click', onOpen);
 closeModalBtn.addEventListener('click', onClose);
 
-// -------------
