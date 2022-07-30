@@ -1,0 +1,163 @@
+.footer {
+  background-color: #000;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__text {
+    text-align: center;
+    color: $main-gray-color;
+    cursor: default;
+    padding: 40px 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__img {
+    width: 14px;
+    height: 14px;
+    margin-top: 10px;
+    fill: red;
+  }
+
+  &__text-link {
+    cursor: context-menu;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+  @media (max-width: 767px) {
+    &__text {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 24px 0;
+    }
+  }
+}
+.footer-backdrop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  // transition: 0.7s;
+  z-index: 100;
+  padding-left: 20px;
+  padding-right: 20px;
+  // overflow: scroll;
+
+  @media (max-width: 767px) {
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.footer-modal {
+  position: relative;
+  max-height: 90%;
+  width: 750px;
+  padding: 50px;
+  background-color: #fff2fd;
+  border-radius: 10px;
+  flex-wrap: wrap;
+
+  @media (max-width: 767px) {
+    overflow-y: scroll;
+  }
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 2px;
+      background-color: #000;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: $accent-color;
+    }
+  }
+
+  &__team {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: $accent-color;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  &__element {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &__member-name {
+    font-weight: 500;
+    text-align: center;
+    color: $modal-text-color;
+    margin-bottom: 5px;
+  }
+
+  &__member-role {
+    font-weight: 400;
+    color: $accent-color;
+  }
+
+  &__img {
+    height: 170px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &__social-link {
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__social-link:hover {
+    color: $main-white-color;
+  }
+}
