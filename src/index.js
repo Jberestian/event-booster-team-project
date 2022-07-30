@@ -7,7 +7,7 @@ import loader from './js/loader';
 import footer_modal from './js/footer_modal';
 import modal from './js/modal';
 
-// import { refs } from './js/refs';
+import { refs } from './js/refs';
 import { option } from './js/pagination';
 
 const discoveryApi = new DiscoveryAPI();
@@ -29,12 +29,7 @@ const render = async () => {
 
 render();
 
-// select
-const element = document.querySelector('.form-select');
-const markup3 = code
+const chooseCountryMarkup = code
   .map(el => `<option value="${el.code}">${el.name}</option>`)
   .join('');
-element.insertAdjacentHTML('beforeend', markup3);
-// const choices = new Choices(element, {
-//   searchEnabled: true,
-// });
+refs.element.insertAdjacentHTML('beforeend', chooseCountryMarkup);
