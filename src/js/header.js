@@ -1,6 +1,7 @@
 import { refs } from './refs';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
+import 'animate.css';
 import { DiscoveryAPI } from './discovery-api';
 import { createEventList } from './createEventList';
 
