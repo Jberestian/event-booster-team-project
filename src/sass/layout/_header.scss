@@ -126,6 +126,13 @@
   }
 }
 
+.select__icon {
+  position: absolute;
+  top: 14;
+  right: 20;
+  fill: $main-gray-color;
+}
+
 .search-form {
   display: flex;
   flex-direction: column;
@@ -182,9 +189,14 @@
 
     &:hover,
     &:focus {
-      border: 1px solid $main-white-color;
+      border: 1px solid $accent-color;
       outline: none;
     }
+  }
+  input:hover::placeholder {
+    color: $accent-color;
+    font-weight: 900;
+    transition: 250ms;
   }
 
   &__icon {
@@ -192,6 +204,9 @@
     top: 14;
     right: 20;
     fill: $main-gray-color;
+
+    &:hover {
+      fill: $accent-color;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .search-form__input:hover + &,
@@ -219,13 +234,26 @@
     appearance: none;
     cursor: pointer;
 
+    &:focus {
+      border: 1px solid $accent-color;
     &:focus,
     &:hover {
       border: 1px solid $main-white-color;
       outline: none;
     }
+    &:hover {
+      color: $accent-color;
+      font-weight: 900;
+      transition: 250ms;
+    }
   }
 }
+.custom-select-option {
+  background-color: aqua;
+}
+
+#customSelect-B7mIB-panel {
+  background-color: aqua;
 
 .select__icon {
   position: absolute;

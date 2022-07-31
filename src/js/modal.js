@@ -1,3 +1,5 @@
+import { refs } from './refs';
+
 const openModalBtn = document.querySelector('.event-gallery__list');
 const closeModalBtn = document.querySelector('.modal__close');
 const modal = document.querySelector('.backdrop');
@@ -22,4 +24,3 @@ document.addEventListener('keydown', event => {
 
 openModalBtn.addEventListener('click', onOpen);
 closeModalBtn.addEventListener('click', onClose);
-
