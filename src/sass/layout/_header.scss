@@ -118,10 +118,6 @@
   fill: $main-gray-color;
 }
 
-// .custom-select-panel {
-//   background-color: rgba(245, 5, 21, 0.2);
-// }
-
 .search-form {
   display: flex;
   flex-direction: column;
@@ -134,8 +130,6 @@
 
   &__element {
     position: relative;
-    // backdrop-filter: blur(80px);
-
     width: 288px;
     height: 40px;
     font-size: 16px;
@@ -170,9 +164,14 @@
     backdrop-filter: blur(20px);
 
     &:focus {
-      border: 1px solid $main-white-color;
+      border: 1px solid $accent-color;
       outline: none;
     }
+  }
+  input:hover::placeholder {
+    color: $accent-color;
+    font-weight: 900;
+    transition: 250ms;
   }
 
   &__btn {
@@ -193,6 +192,10 @@
 
   &__icon {
     fill: $main-gray-color;
+
+    &:hover {
+      fill: $accent-color;
+    }
   }
   &__select {
     width: 100%;
@@ -211,8 +214,20 @@
     appearance: none;
 
     &:focus {
-      border: 1px solid $main-white-color;
+      border: 1px solid $accent-color;
       outline: none;
     }
+    &:hover {
+      color: $accent-color;
+      font-weight: 900;
+      transition: 250ms;
+    }
   }
+}
+.custom-select-option {
+  background-color: aqua;
+}
+
+#customSelect-B7mIB-panel {
+  background-color: aqua;
 }
