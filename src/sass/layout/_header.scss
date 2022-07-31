@@ -155,6 +155,11 @@
     color: $main-white-color;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::placeholder {
+      color: $main-gray-color;
+    }
 
     &:focus {
       border: 1px solid $main-white-color;
@@ -180,7 +185,9 @@
 
   &__icon {
     fill: $main-gray-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
   &__select {
     width: 100%;
     height: 100%;
@@ -196,6 +203,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:focus {
       border: 1px solid $main-white-color;
@@ -204,13 +212,48 @@
   }
 }
 
+.search-form__icon {
+  fill: $main-gray-color;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .search-form__input:focus + & {
+    fill: $main-white-color;
+  }
+}
+
 .select__icon {
   position: absolute;
   top: 14;
   right: 20;
   fill: $main-gray-color;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .search-form__select:focus + & {
+    fill: $main-white-color;
+    transform: rotate(180deg);
+  }
 }
 
 .custom-select-panel {
-  background-color: rgba(255, 255, 255, 0.2);
+  width: inherit;
+  font-size: 16px;
+  padding-left: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
 }
+
+// .animate__animated {
+//   animation: neon 1.5s ease-in-out infinite alternate;
+
+//   @keyframes neon {
+//     from {
+//       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177,
+//         0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+//     }
+//     to {
+//       text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+//         0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
+//     }
+//   }
+// }
