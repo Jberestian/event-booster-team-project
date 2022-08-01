@@ -157,7 +157,5 @@ const renderInfoModal = events => {
   function infoAboutAuthor(e) {
     window.open(`https://www.google.com/search?q=${events.name}`);
   }
+  moreBtn.addEventListener('click', infoAboutAuthor);
 };
-
-
-
