@@ -4,6 +4,7 @@ import { createEventList } from './js/createEventList';
 import code from './countries.json';
 import header from './js/header';
 import loader from './js/loader';
+import arrowUp from './js/arrowUp';
 import footer_modal from './js/footer_modal';
 import modal from './js/modal';
 
