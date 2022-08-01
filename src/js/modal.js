@@ -159,3 +159,6 @@ const renderInfoModal = events => {
   }
   moreBtn.addEventListener('click', infoAboutAuthor);
 };
+
+
+
