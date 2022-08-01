@@ -8,6 +8,7 @@ const discoveryApi = new DiscoveryAPI();
 export function startPagination() {
   const options = {
     totalItems: 980,
+
     itemsPerPage: discoveryApi.size,
     visiblePages: window.outerWidth < 768 ? 3 : 5,
     page: 1,
@@ -28,6 +29,7 @@ export function startPagination() {
         refs.galleryList.innerHTML = event;
 
         createEventList(event);
+
       } catch (err) {
         console.log(err);
       }
@@ -35,3 +37,4 @@ export function startPagination() {
     nextPage();
   });
 }
+

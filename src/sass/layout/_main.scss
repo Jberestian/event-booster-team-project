@@ -7,6 +7,7 @@
   border: 1px solid rgba(220, 86, 197, 0.3);
   border-radius: 50px 0px;
   z-index: -1;
+
 }
 
 .event-gallery {
@@ -30,6 +31,7 @@
       transform: scale(1.1);
       transition: transform 250ms linear;
     }
+
   }
 
   &__img {
@@ -37,6 +39,7 @@
     width: 100%;
     max-width: 120px;
     height: 151px;
+
     border-radius: 50px 0;
   }
 }
@@ -80,6 +83,7 @@
     width: 130px;
     top: -10px;
     left: 50px;
+
   }
 
   .event-gallery {
@@ -87,6 +91,7 @@
       width: 100%;
       max-width: 165px;
       height: 205px;
+
     }
   }
 }
@@ -97,11 +102,13 @@
     width: 112px;
     top: -14px;
     left: 46px;
+
   }
 
   .event-gallery {
     &__item {
       width: calc(25% - 10px);
+
       margin-bottom: 54px;
     }
 
@@ -109,6 +116,7 @@
       width: 100%;
       max-width: 141px;
       height: 178px;
+
     }
   }
 
@@ -143,6 +151,7 @@
     height: 212px;
     top: -17px;
     left: 17px;
+
   }
 
   .event-gallery {
@@ -167,3 +176,4 @@
     left: 67px;
   }
 }
+
