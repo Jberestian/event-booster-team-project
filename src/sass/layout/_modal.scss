@@ -20,6 +20,11 @@
   pointer-events: none;
 }
 
+.modal__img {
+  width: 427px;
+  height: 100%;
+}
+
 .modal {
   position: relative;
   background-color: #fff2fd;
@@ -30,6 +35,8 @@
   padding-right: 21px;
   padding-left: 16px;
   overflow: scroll;
+
+  
 
   @media screen and (min-width: 320px) {
     width: 704px;
@@ -172,6 +179,7 @@
     border-radius: 5px;
     width: 145px;
     height: 40px;
+    cursor: pointer;
 
     @media screen and (max-width: 767px) {
       margin: 0 auto;
@@ -239,3 +247,4 @@
     }
   }
 }
+

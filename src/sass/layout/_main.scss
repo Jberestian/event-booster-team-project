@@ -1,11 +1,13 @@
 .border {
   position: absolute;
-  height: 95px;
-  width: 102px;
-  left: 35px;
+  height: 103px;
+  width: 95px;
+  left: 37px;
   top: -10px;
   border: 1px solid rgba(220, 86, 197, 0.3);
   border-radius: 50px 0px;
+  z-index: -1;
+
 }
 
 .event-gallery {
@@ -23,12 +25,21 @@
     position: relative;
     width: calc(50% - 10px);
     margin-bottom: 40px;
+    transform: scale(1);
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      transition: transform 250ms linear;
+    }
+
   }
 
   &__img {
     padding-bottom: 8px;
     width: 100%;
-    max-width: 125px;
+    max-width: 120px;
+    height: 151px;
+
     border-radius: 50px 0;
   }
 }
@@ -68,16 +79,19 @@
 
 @media screen and (min-width: 480px) {
   .border {
-    height: 115px;
-    width: 120px;
+    height: 145px;
+    width: 130px;
     top: -10px;
-    left: 60px;
+    left: 50px;
+
   }
 
   .event-gallery {
     &__img {
       width: 100%;
       max-width: 165px;
+      height: 205px;
+
     }
   }
 }
@@ -85,21 +99,24 @@
 @media screen and (min-width: 768px) {
   .border {
     height: 120px;
-    width: 130px;
-    left: 85px;
-    top: -10px;
+    width: 112px;
+    top: -14px;
+    left: 46px;
+
   }
 
   .event-gallery {
     &__item {
-      width: calc(30% - 10px);
+      width: calc(25% - 10px);
+
       margin-bottom: 54px;
     }
 
     &__img {
       width: 100%;
-      max-width: 205px;
-      height: 230px;
+      max-width: 141px;
+      height: 178px;
+
     }
   }
 
@@ -130,10 +147,11 @@
 
 @media screen and (min-width: 1024px) {
   .border {
-    width: 200px;
-    height: 192px;
-    top: -15px;
-    left: 45px;
+    width: 226px;
+    height: 212px;
+    top: -17px;
+    left: 17px;
+
   }
 
   .event-gallery {
@@ -149,3 +167,13 @@
     }
   }
 }
+
+@media screen and (min-width: 1025px) {
+  .border {
+    width: 226px;
+    height: 212px;
+    top: -17px;
+    left: 67px;
+  }
+}
+

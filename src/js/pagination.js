@@ -3,12 +3,12 @@ import Pagination from 'tui-pagination';
 import { refs } from './refs';
 import { createEventList } from './createEventList';
 
-
 const discoveryApi = new DiscoveryAPI();
 
-export function startPagination(totalEvents) {
+export function startPagination() {
   const options = {
-    totalItems: totalEvents,
+    totalItems: 980,
+
     itemsPerPage: discoveryApi.size,
     visiblePages: window.outerWidth < 768 ? 3 : 5,
     page: 1,
@@ -29,7 +29,7 @@ export function startPagination(totalEvents) {
         refs.galleryList.innerHTML = event;
 
         createEventList(event);
-      
+
       } catch (err) {
         console.log(err);
       }
@@ -37,3 +37,4 @@ export function startPagination(totalEvents) {
     nextPage();
   });
 }
+
