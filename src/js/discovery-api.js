@@ -27,6 +27,10 @@ export class DiscoveryAPI {
     );
   }
 
+  async fetchEventsById() {
+    return axios.get(`${this.#BASE_URL}?apikey=${this.#API_KEY}&{id}`);
+  }
+
   setPage(page) {
     this.page = page;
   }
