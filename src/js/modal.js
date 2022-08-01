@@ -152,4 +152,12 @@ const renderInfoModal = events => {
       </div>
        <button class="more-btn" type="button" data-id="${events.groupId}" >MORE FROM THIS AUTHOR</button>`;
   modalCardInfo.innerHTML = markup;
+
+  const moreBtn = document.querySelector('.more-btn');
+  function infoAboutAuthor(e) {
+    window.open(`https://www.google.com/search?q=${events.name}`);
+  }
 };
+
+
+
